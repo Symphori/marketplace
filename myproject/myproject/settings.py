@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Applications tierces
+    'taggit',  # Gestion des tags
+    'django_ckeditor_5',  # CKEditor 5
+
     # Custom Apps
     'core',
     'userauths',
@@ -64,6 +68,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'core.context_processor.default',  # Processeur de contexte personnalisé
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
