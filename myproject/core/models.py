@@ -54,8 +54,8 @@ class Category(models.Model):
         return self.title
 
 
-class Tags(models.Model):
-    pass
+# class Tags(models.Model):
+#     pass
 
 
 class Vendor(models.Model):
@@ -124,7 +124,7 @@ class Product(models.Model):
 
     # tags = TaggableManager(blank=True)
 
-    tags = models.ForeignKey(Tags, on_delete=models.SET_NULL, null=True)
+    # tags = models.ForeignKey(Tags, on_delete=models.SET_NULL, null=True)
 
     product_status = models.CharField(
         choices=STATUS, max_length=10, default="in_review")
